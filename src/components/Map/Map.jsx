@@ -11,7 +11,21 @@ const Map = () => {
     const isMobile = useMediaQuery('(min-width:600px)');
 
     return (
-        <h1>Map</h1>
+        <div className={classes.mapContainer}>
+            <GoogleMapReact
+                bootstrapURLKeys={{ key: '' }}
+                defaultCenter={coordinates}
+                center={coordinates}
+                defaultZoom={14}
+                margin={[50, 50, 50, 50]}
+                optioins={''}
+                onChange={''}
+
+                onChildClick={''}
+            >
+
+            </GoogleMapReact>
+        </div>
     );
 }
 
