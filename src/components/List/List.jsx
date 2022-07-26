@@ -14,6 +14,12 @@ const List = () => {
         { name: 'Hot Spot' },
         { name: 'Best Suya Spot' },
         { name: 'Tourist Trap' },
+        { name: 'Best Beach' },
+        { name: 'Family Friendly Beach' },
+        { name: 'Exclusive Club' },
+        { name: 'Famous Seafood' },
+        { name: 'Best Asian Spot' },
+        { name: 'Best Cultural Experience' },
     ];
 
     return (
