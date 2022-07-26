@@ -11,7 +11,9 @@ const List = () => {
             <Typography variant='h4'>Essential Amenities near you</Typography>
             <FormControl className={classes.formControl}>
                 <InputLabel>Type</InputLabel>
-                <Select value={} onChange={}></Select>
+                <Select value={} onChange={}>
+                    <MenuItem value='Restaurants'>Restaurants</MenuItem>
+                </Select>
             </FormControl>
         </div>
     );
