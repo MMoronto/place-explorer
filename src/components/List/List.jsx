@@ -28,9 +28,9 @@ const List = () => {
             <FormControl className={classes.formControl}>
                 <InputLabel>Type</InputLabel>
                 <Select value={type} onChange={(e) => setType(e.target.value)}>
-                    <MenuItem value='Restaurants'>Restaurants</MenuItem>
-                    <MenuItem value='Hotels'>Hotels</MenuItem>
-                    <MenuItem value='Museums'>Museums</MenuItem>
+                    <MenuItem value='restaurants'>Restaurants</MenuItem>
+                    <MenuItem value='hotels'>Hotels</MenuItem>
+                    <MenuItem value='museums'>Museums</MenuItem>
                 </Select>
             </FormControl>
             <FormControl className={classes.formControl}>
