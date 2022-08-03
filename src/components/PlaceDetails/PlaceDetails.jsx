@@ -4,6 +4,8 @@ import LocationOnIcon from '@material-ui/icons/LocationOn';
 import phoneIcon from '@material-ui/icons/Phone';
 import Rating from '@material-ui/lab/Rating';
 
+import useStyles from './styles';
+
 const PlaceDetails = ({ place }) => {
     console.log(place);
 
