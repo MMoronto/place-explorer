@@ -10,7 +10,10 @@ const PlaceDetails = ({ place }) => {
     console.log(place);
 
     return (
-        <h1>{place.name}</h1>
+        <Card elevation={6}>
+            <CardMedia />
+            
+        </Card>
     );
 }
 
