@@ -11,8 +11,10 @@ const PlaceDetails = ({ place }) => {
 
     return (
         <Card elevation={6}>
-            <CardMedia />
-            
+            <CardMedia 
+                style={{ height: 350 }}
+            />
+
         </Card>
     );
 }
