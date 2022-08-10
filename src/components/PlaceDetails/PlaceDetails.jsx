@@ -13,7 +13,7 @@ const PlaceDetails = ({ place }) => {
         <Card elevation={6}>
             <CardMedia 
                 style={{ height: 350 }}
-                image={place.photo ? place.photo.images.large.url : ''}
+                image={place.photo ? place.photo.images.large.url : 'https://www.zikoko.com/chopist/favorite-nigerian-street-foods/'}
                 title={place.name}
             />
 
