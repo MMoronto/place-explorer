@@ -14,6 +14,7 @@ const PlaceDetails = ({ place }) => {
             <CardMedia 
                 style={{ height: 350 }}
                 image={place.photo ? place.photo.images.large.url : ''}
+                title={place.name}
             />
 
         </Card>
