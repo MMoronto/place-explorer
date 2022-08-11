@@ -17,7 +17,7 @@ const PlaceDetails = ({ place }) => {
                 title={place.name}
             />
             <CardContent>
-                <Typography gutterBottom variant="h5">{}</Typography>
+                <Typography gutterBottom variant="h5">{place.name}</Typography>
             </CardContent>
 
         </Card>
