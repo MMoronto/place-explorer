@@ -16,6 +16,9 @@ const PlaceDetails = ({ place }) => {
                 image={place.photo ? place.photo.images.large.url : 'https://www.zikoko.com/chopist/favorite-nigerian-street-foods/'}
                 title={place.name}
             />
+            <CardContent>
+                <Typography gutterBottom variant="h5">{}</Typography>
+            </CardContent>
 
         </Card>
     );
