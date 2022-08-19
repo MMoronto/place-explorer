@@ -7,6 +7,7 @@ import List from './components/List/List';
 import Map from './components/Map/Map';
 
 const App = () => {
+    const [type, setType] = useState('places');
     const [places, setPlaces] = useState([]);
 
     const [coordinates, setCoordinates] = useState({});
@@ -19,11 +20,11 @@ const App = () => {
     }, []);
 
     useEffect(() => {
-        getPlacesData(bounds.sw, bounds.ne)
+        getPlacesData(type, bounds.sw, bounds.ne)
         .then((data) => {
-            console.log(data);
+            // console.log(data);
 
-            setPlaces(data);
+            setPlaces(data.filter((place) => place.name && place.num_reviews > 0));
         })
     }, [coordinates, bounds]);
 
