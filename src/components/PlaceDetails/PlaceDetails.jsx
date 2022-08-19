@@ -26,6 +26,12 @@ const PlaceDetails = ({ place }) => {
                     <Typography variant="subtitle1">Ranking</Typography>
                     <Typography gutterBottom variant="subtitle1">{place.ranking}</Typography>
                 </Box>
+                {place?.awards ?.map((award) => (
+                    <Box display="flex" justifyContent="space-between" alignItems="center">
+                        <img />
+                    </Box>
+                ))}
+
             </CardContent>
 
         </Card>
