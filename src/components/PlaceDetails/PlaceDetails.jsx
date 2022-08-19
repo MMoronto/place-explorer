@@ -28,7 +28,7 @@ const PlaceDetails = ({ place }) => {
                 </Box>
                 {place?.awards ?.map((award) => (
                     <Box display="flex" justifyContent="space-between" alignItems="center">
-                        <img />
+                        <img src={award.images.small} alt={award.display_name}/>
                     </Box>
                 ))}
 
