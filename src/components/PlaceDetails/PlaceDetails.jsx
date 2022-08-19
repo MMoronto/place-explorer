@@ -18,6 +18,9 @@ const PlaceDetails = ({ place }) => {
             />
             <CardContent>
                 <Typography gutterBottom variant="h5">{place.name}</Typography>
+                <Box display="flex" justifyContent="space-between">
+                    <Typography variant="subtitle1"></Typography>
+                </Box>
             </CardContent>
 
         </Card>
