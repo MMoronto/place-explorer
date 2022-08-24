@@ -26,7 +26,15 @@ const Map = ({ setCoordinates, setBounds, coordinates }) => {
                 }}
                 onChildClick={''}
             >
+                {/* {places?.map(() => (
+                    <div
+                       className={classes.markerContainer}
+                       lat={place.latitude}
+                       lng={place.longitude}
+                    >
 
+                    </div>
+                ))} */}
             </GoogleMapReact>
         </div>
     );
