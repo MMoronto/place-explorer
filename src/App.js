@@ -11,10 +11,10 @@ const App = () => {
     const [places, setPlaces] = useState([]);
 
     const [coordinates, setCoordinates] = useState({});
-    const [bounds, setBounds] = useState(null);
+    const [bounds, setBounds] = useState({});
 
     useEffect(() => {
-        navigator.geolocation.getCurrentPosition(({ coordinates: { latitude, longitude } }) => {
+        navigator.geolocation.getCurrentPosition(({ coords: { latitude, longitude } }) => {
             setCoordinates({ lat: latitude, lng: longitude });
         });
     }, []);
@@ -22,9 +22,7 @@ const App = () => {
     useEffect(() => {
         getPlacesData(type, bounds.sw, bounds.ne)
         .then((data) => {
-            // console.log(data);
-
-            setPlaces(data.filter((place) => place.name && place.num_reviews > 0));
+            setPlaces(data);
         })
     }, [coordinates, bounds]);
 
