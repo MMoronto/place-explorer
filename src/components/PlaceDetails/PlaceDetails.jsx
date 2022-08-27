@@ -45,7 +45,13 @@ const PlaceDetails = ({ place }) => {
                     <Typography gutterBottom variant="subtitle2" color="textSecondary" className={classes.spacing}>
                         <PhoneIcon /> {place.phone}
                     </Typography>
-                )}                
+                )}
+                <CardActions>
+                    <Button size="small" color="primary" onClick={() => } >
+
+                    </Button>
+                </CardActions>
+
             </CardContent>
 
         </Card>
