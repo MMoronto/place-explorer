@@ -47,9 +47,12 @@ const PlaceDetails = ({ place }) => {
                     </Typography>
                 )}
                 <CardActions>
-                    <Button size="small" color="primary" onClick={() => } >
-
+                    <Button size="small" color="primary" onClick={() => window.open(place.web_url, '_blank')} >
+                        Place Explorer
                     </Button>
+                    <Button size="small" color="primary" onClick={() => window.open(place.website, '_blank')} >
+                        Place Explorer
+                    </Button>                    
                 </CardActions>
 
             </CardContent>
