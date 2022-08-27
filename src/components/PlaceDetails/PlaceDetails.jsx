@@ -42,8 +42,8 @@ const PlaceDetails = ({ place }) => {
                     </Typography>
                 )}
                 {place?.phone && (
-                    <Typography gutterBottom variant="subtitle2" color="textSecondary" className={classes.subtitle}>
-                        <LocationOnIcon /> {place.address}
+                    <Typography gutterBottom variant="subtitle2" color="textSecondary" className={classes.spacing}>
+                        <PhoneIcon /> {place.address}
                     </Typography>
                 )}                
             </CardContent>
