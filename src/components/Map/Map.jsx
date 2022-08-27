@@ -33,6 +33,21 @@ const Map = ({ places, setCoordinates, setBounds, coordinates, setChildClicked }
                        lng={Number(place.longitude)}
                        key={i}
                     >
+                        {
+                            isMobile ? (
+                                <LocationOnOutlinedIcon color="primary" fontSize="large" />
+                            ) : (
+                                <Paper elevation={3} className={classes.paper}>
+                                    <Typography className={classes.Typography} variant="subtitle2" gutterBottom>
+                                        {place.name}
+                                    </Typography>
+                                    <img
+                                        className={classes.pointer}
+                                        src={place.photo ? place.photo.images.large.url : 'https://images.squarespace-cdn.com/content/v1/54222358e4b0ef23d87a996b/1557093952331-16M9H0UFXZQECKMZXS33/SAM_4808.JPG?format=1000w'}
+                                    />
+                                </Paper>
+                            )
+                        }
 
                     </div>
                 ))}
