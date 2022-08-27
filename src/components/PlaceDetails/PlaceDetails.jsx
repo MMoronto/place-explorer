@@ -51,7 +51,7 @@ const PlaceDetails = ({ place }) => {
                         Place Explorer
                     </Button>
                     <Button size="small" color="primary" onClick={() => window.open(place.website, '_blank')} >
-                        Place Explorer
+                        Website
                     </Button>                    
                 </CardActions>
 
