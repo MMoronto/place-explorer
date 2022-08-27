@@ -1,15 +1,14 @@
 import React from 'react';
 import { Box, Typography, Button, Card, CardMedia, CardContent, CardActions, Chip } from '@material-ui/core';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
-import phoneIcon from '@material-ui/icons/Phone';
+import PhoneIcon from '@material-ui/icons/Phone';
 import Rating from '@material-ui/lab/Rating';
 
 import useStyles from './styles';
 import { mergeClasses } from '@material-ui/styles';
 
 const PlaceDetails = ({ place }) => {
-    console.log(place);
-
+    const classes = useStyles();
     return (
         <Card elevation={6}>
             <CardMedia 
