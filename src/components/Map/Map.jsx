@@ -26,11 +26,12 @@ const Map = ({ places, setCoordinates, setBounds, coordinates, setChildClicked }
                 }}
                 onChildClick={(child) => setChildClicked(child)}
             >
-                {places?.map(() => (
+                {places?.map((place, i) => (
                     <div
                        className={classes.markerContainer}
-                       lat={place.latitude}
-                       lng={place.longitude}
+                       lat={Number(place.latitude)}
+                       lng={Number(place.longitude)}
+                       key={i}
                     >
 
                     </div>
