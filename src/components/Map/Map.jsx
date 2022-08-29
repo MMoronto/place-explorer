@@ -43,7 +43,8 @@ const Map = ({ places, setCoordinates, setBounds, coordinates, setChildClicked }
                                     </Typography>
                                     <img
                                         className={classes.pointer}
-                                        src={place.photo ? place.photo.images.large.url : 'https://images.squarespace-cdn.com/content/v1/54222358e4b0ef23d87a996b/1557093952331-16M9H0UFXZQECKMZXS33/SAM_4808.JPG?format=1000w'}
+                                        src={place.photo ? place.photo.images.large.url : 'https://images.squarespace-cdn.com/content/v1/54222358e4b0ef23d87a996b/1557093952331-16M9H0UFXZQECKMZXS33/SAM_4808.JPG'}
+                                        alt={place.name}
                                     />
                                 </Paper>
                             )
