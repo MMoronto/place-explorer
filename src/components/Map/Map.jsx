@@ -9,7 +9,7 @@ import useStyles from './styles';
 
 const Map = ({ places, setCoordinates, setBounds, coordinates, setChildClicked }) => {
     const classes = useStyles();
-    const isMobile = useMediaQuery('(min-width:600px)');
+    const isDesktop = useMediaQuery('(min-width:600px)');
 
     return (
         <div className={classes.mapContainer}>
@@ -34,7 +34,7 @@ const Map = ({ places, setCoordinates, setBounds, coordinates, setChildClicked }
                        key={i}
                     >
                         {
-                            isMobile ? (
+                            !isDesktop ? (
                                 <LocationOnOutlinedIcon color="primary" fontSize="large" />
                             ) : (
                                 <Paper elevation={3} className={classes.paper}>
