@@ -9,9 +9,12 @@ const List = ({ places, childClicked }) => {
     const classes = useStyles();
     const [type, setType] = useState('restaurants');
     const [rating, setRating] = useState('');
+    const [elRefs, setElRefs] = useState([]);
 
     useEffect(() => {
+        const refs = Array(places.length).fill().map((_, i) => refs[i] || createRef());
 
+        setElRefs(refs);
     }, [places]);
 
     return (
@@ -36,7 +39,7 @@ const List = ({ places, childClicked }) => {
             </FormControl>
             <Grid container spacing={3} className={classes.list}>
                 {places?.map((place, i) => (
-                    <Grid item key={i} xs={12}>
+                    <Grid ref={elRefs[i]} item key={i} xs={12}>
                         <PlaceDetails place={place} />
                     </Grid>
                 ))}
