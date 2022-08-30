@@ -44,6 +44,7 @@ const App = () => {
                         setBounds={setBounds}
                         coordinates={coordinates}
                         places={places}
+                        setChildClicked={setChildClicked}
                     />
                 </Grid>
             </Grid>
