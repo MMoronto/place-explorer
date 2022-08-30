@@ -24,7 +24,8 @@ const List = ({ places, childClicked, isLoading }) => {
                 <div className={classes.loading}>
                     <CircularProgress size="5rem" />
                 </div>
-             ) ? (
+             ) : (
+                 <>
             <FormControl className={classes.formControl}>
                 <InputLabel>Type</InputLabel>
                 <Select value={type} onChange={(e) => setType(e.target.value)}>
@@ -53,7 +54,8 @@ const List = ({ places, childClicked, isLoading }) => {
                     </Grid>
                 ))}
             </Grid>
-             )
+            </>
+             )}
         </div>
     );
 }
