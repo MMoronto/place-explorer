@@ -9,6 +9,7 @@ import Map from './components/Map/Map';
 const App = () => {
     // const [type, setType] = useState('places');
     const [places, setPlaces] = useState([]);
+    const [childClicked, setChildClicked] = useState(null);
 
     const [coordinates, setCoordinates] = useState({});
     const [bounds, setBounds] = useState({});
@@ -16,7 +17,7 @@ const App = () => {
     useEffect(() => {
         navigator.geolocation.getCurrentPosition(({ coords: { latitude, longitude } }) => {
             setCoordinates({ lat: latitude, lng: longitude });
-        });
+        })
     }, []);
 
     useEffect(() => {
