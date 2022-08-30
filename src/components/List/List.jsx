@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, createRef } from 'react';
 import { CircularProgress, Grid, Typography, InputLabel, MenuItem, FormControl, Select } from '@material-ui/core';
 
 import PlaceDetails from '../PlaceDetails/PlaceDetails';
@@ -10,7 +10,9 @@ const List = ({ places, childClicked }) => {
     const [type, setType] = useState('restaurants');
     const [rating, setRating] = useState('');
 
-    console.log({ childClicked });
+    useEffect(() => {
+
+    }, [places]);
 
     return (
         <div className={classes.container}>
