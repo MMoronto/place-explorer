@@ -44,7 +44,11 @@ const App = () => {
                     <List 
                         places={places}
                         childClicked={childClicked}
-                        isLoading={isLoading} 
+                        isLoading={isLoading}
+                        type={type}
+                        setType={setType} 
+                        rating={rating}
+                        setRating={setRating}
                     />
                 </Grid>
                 <Grid item xs={12} md={8}>
