@@ -15,6 +15,9 @@ const App = () => {
     const [bounds, setBounds] = useState({});
 
     const [isLoading, setIsLoading] = useState(false);
+    const [type, setType] = useState('restaurants');
+    const [rating, setRating] = useState('');
+
 
     useEffect(() => {
         setIsLoading(true);
