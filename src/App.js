@@ -20,13 +20,13 @@ const App = () => {
 
 
     useEffect(() => {
-        setIsLoading(true);
         navigator.geolocation.getCurrentPosition(({ coords: { latitude, longitude } }) => {
             setCoordinates({ lat: latitude, lng: longitude });
         })
     }, []);
 
     useEffect(() => {
+        setIsLoading(true);
         // getPlacesData(type, bounds.sw, bounds.ne)
         getPlacesData(bounds.sw, bounds.ne)
         .then((data) => {
