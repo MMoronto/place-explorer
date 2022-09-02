@@ -27,8 +27,8 @@ const App = () => {
 
     useEffect(() => {
         setIsLoading(true);
-        // getPlacesData(type, bounds.sw, bounds.ne)
-        getPlacesData(bounds.sw, bounds.ne)
+        
+        getPlacesData(type, bounds.sw, bounds.ne)
         .then((data) => {
             setPlaces(data);
             setIsLoading(false);
