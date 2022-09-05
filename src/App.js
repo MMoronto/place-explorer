@@ -26,6 +26,10 @@ const App = () => {
     }, []);
 
     useEffect(() => {
+        const filteredPlaces = places.filter((place) => place.rating > rating)
+    }, [rating]);
+
+    useEffect(() => {
         setIsLoading(true);
         
         getPlacesData(type, bounds.sw, bounds.ne)
