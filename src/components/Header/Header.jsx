@@ -8,6 +8,9 @@ import useStyles from './styles';
 
 const Header = () => {
     const classes = useStyles();
+    const [autocomplete, setAutocomplete] = useState();
+
+    const onLoad = () => 
 
     return (
         <AppBar position="static">
