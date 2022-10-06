@@ -9,6 +9,8 @@ import Map from './components/Map/Map';
 const App = () => {
     // const [type, setType] = useState('places');
     const [places, setPlaces] = useState([]);
+    const [filteredPlaces, setFilteredPlaces] = useState([]);
+
     const [childClicked, setChildClicked] = useState(null);
 
     const [coordinates, setCoordinates] = useState({});
@@ -27,6 +29,8 @@ const App = () => {
 
     useEffect(() => {
         const filteredPlaces = places.filter((place) => place.rating > rating)
+
+        setFilteredPlaces(filteredPlaces);
     }, [rating]);
 
     useEffect(() => {
