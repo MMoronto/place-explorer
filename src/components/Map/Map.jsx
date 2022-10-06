@@ -20,7 +20,7 @@ const Map = ({ places, setCoordinates, setBounds, coordinates, setChildClicked }
                 defaultZoom={14}
                 margin={[50, 50, 50, 50]}
                 // optioins={{ disableDefaultUI: true, zoomControl: true, styles: mapStyles }}
-                optioins={''}
+                optioins={'AIzaSyCdFCmebvCSKBs2l7JDA1eNry-SNpCpzPU'}
                 onChange={(e) => {
                     setCoordinates({ lat: e.center.lat, lng: e.center.lng });
                     setBounds({ ne: e.marginBounds.ne, sw: e.marginBounds.sw });
