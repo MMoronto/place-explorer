@@ -19,14 +19,14 @@ const Header = () => {
                     <Typography variant="h6" className={classes.title}>
                         Let's Explore
                     </Typography>
-                    {/* <Autocomplete> */}
+                    <Autocomplete onLoad={} onPlaceChanged={}>
                         <div className={classes.search}>
                             <div className={classes.searchIcon}>
                                 <SearchIcon />
                             </div>
                             <InputBase placeholder="Search... " classes={{ root: classes.inputRoot, input: classes.inputInput}} />
                         </div>
-                    {/* </Autocomplete> */}
+                    </Autocomplete>
                 </Box>
             </Toolbar>
         </AppBar>
