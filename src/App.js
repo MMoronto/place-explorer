@@ -44,7 +44,7 @@ const App = () => {
                 setIsLoading(false);
             })
         }
-    }, [type, coordinates, bounds]);
+    }, [type, bounds]);
 
 
     return (
