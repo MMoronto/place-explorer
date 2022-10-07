@@ -12,6 +12,10 @@ const Header = () => {
 
     const onLoad = (autoC) => setAutocomplete(autoC); 
 
+    const onPlaceChanged = () => {
+        
+    }
+
     return (
         <AppBar position="static">
             <Toolbar className={classes.toolbar}>
