@@ -6,8 +6,9 @@ import SearchIcon from '@material-ui/icons/Search';
 
 import useStyles from './styles';
 
-const Header = () => {
+const Header = ({ onPlaceChanged, onLoad }) => {
     const classes = useStyles();
+    
     const [autocomplete, setAutocomplete] = useState(null);
 
     const onLoad = (autoC) => setAutocomplete(autoC); 
