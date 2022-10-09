@@ -13,12 +13,12 @@ export const getPlacesData = async (sw, ne) => {
             },
             headers: {
               'x-rapidapi-key': '41599fd560msh907746e088eb965p1a2b46jsnb4b6b8c5b300',
-              'x-rapidapi-host': 'travel-advisor.p.rapidapi.com'
-            }
+              'x-rapidapi-host': 'travel-advisor.p.rapidapi.com',
+            },
           });
 
         return data;
     } catch (error) {
         console.log(error);
     }
-}
+};
