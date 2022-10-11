@@ -26,11 +26,11 @@ export const getPlacesData = async (sw, ne) => {
 export const getWeatherData = async ( lat, lng) => {
   try{
     if(lat && lng) {
-      const {data} = await axios.get('https://community-open-weather-map.p.rapidapi.com/find', {
-        params: { lat, lon: lng },
+      const {data} = await axios.get('https://open-weather-map27.p.rapidapi.com/weather', {
+        params: { lon: '6.68540', lat: '3.27388', },
         headers: {
-          'x-rapid-key': process.env.REACT_APP_RAPID_API_WEATHER_API_KEY,
-          'x-rapidapi-host': 'community-open-weather-map.p.rapidapi.com',
+          'X-RapidAPI-Key': '41599fd560msh907746e088eb965p1a2b46jsnb4b6b8c5b300',
+          'X-RapidAPI-Host': 'open-weather-map27.p.rapidapi.com'
         },
       });
       return data;
