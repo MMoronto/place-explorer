@@ -9,6 +9,7 @@ import Map from './components/Map/Map';
 const App = () => {
     // const [type, setType] = useState('places');
     const [places, setPlaces] = useState([]);
+    const [weatherData, setWeatherData] = useState([]);
     const [filteredPlaces, setFilteredPlaces] = useState([]);
 
     const [childClicked, setChildClicked] = useState(null);
@@ -38,7 +39,7 @@ const App = () => {
         setIsLoading(true);
 
         getWeatherData(coordinates.lat, coordinates.lng)
-            .then(() => )
+            .then((data) => setWeatherData(data));
         
         getPlacesData(type, bounds.sw, bounds.ne)
             .then((data) => {
@@ -73,6 +74,7 @@ const App = () => {
                         coordinates={coordinates}
                         places={filteredPlaces.length ? filteredPlaces : places}
                         setChildClicked={setChildClicked}
+                        weatherData={weatherData}
                     />
                 </Grid>
             </Grid>

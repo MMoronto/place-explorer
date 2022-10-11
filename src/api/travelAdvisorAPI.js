@@ -26,8 +26,8 @@ export const getPlacesData = async (sw, ne) => {
 export const getWeatherData = async ( lat, lng) => {
   try{
     if(lat && lng) {
-      const {data} = await axios.get('https://open-weather-map27.p.rapidapi.com/weather', {
-        params: { lon: '6.68540', lat: '3.27388', },
+      const { data } = await axios.get('https://open-weather-map27.p.rapidapi.com/weather', {
+        params: { lon: lng, lat: lat, },
         headers: {
           'X-RapidAPI-Key': '41599fd560msh907746e088eb965p1a2b46jsnb4b6b8c5b300',
           'X-RapidAPI-Host': 'open-weather-map27.p.rapidapi.com'
