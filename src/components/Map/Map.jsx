@@ -4,7 +4,7 @@ import { Paper, Typography, useMediaQuery } from '@material-ui/core';
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import Rating from '@material-ui/lab/Rating';
 
-import mapStyles from '../../mapStyles';
+import mapStyles from './mapStyles';
 import useStyles from './styles';
 
 const Map = ({ places, setCoordinates, setBounds, coordinates, setChildClicked, weatherData }) => {
@@ -14,7 +14,7 @@ const Map = ({ places, setCoordinates, setBounds, coordinates, setChildClicked, 
     return (
         <div className={classes.mapContainer}>
             <GoogleMapReact
-                bootstrapURLKeys={{ key: '' }}
+                bootstrapURLKeys={{ key: 'AIzaSyCdFCmebvCSKBs2l7JDA1eNry-SNpCpzPU' }}
                 defaultCenter={coordinates}
                 center={coordinates}
                 defaultZoom={14}
@@ -60,7 +60,7 @@ const Map = ({ places, setCoordinates, setBounds, coordinates, setChildClicked, 
                 ))}
                 {weatherData?.list?.map((data, i) => (
                     <div key={i} lat={data.coord.lat} lng={data.coord.lon}>
-                        <img src={`https://openweathermap.org/img/w/${data.weather[0].icon}.png`} />
+                        <img height={100} src={`https://openweathermap.org/img/w/${data.weather[0].icon}.png`} />
                     </div>
                 ))}
             </GoogleMapReact>
