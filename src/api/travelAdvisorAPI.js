@@ -2,7 +2,7 @@ import axios from "axios";
 
 const URL = 'https://travel-advisor.p.rapidapi.com/restaurants/list-in-boundary'
 
-export const getPlacesData = async (sw, ne) => {
+export const getPlacesData = async (type, sw, ne) => {
     try {
         const { data: { data } } = await axios.get(URL, {
             params: {
@@ -12,7 +12,7 @@ export const getPlacesData = async (sw, ne) => {
               tr_longitude: ne.lng,
             },
             headers: {
-              'x-rapidapi-key': '41599fd560msh907746e088eb965p1a2b46jsnb4b6b8c5b300',
+              'x-rapidapi-key': process.env.REACT_APP_RAPIDAPI_KEY,
               'x-rapidapi-host': 'travel-advisor.p.rapidapi.com',
             },
           });
@@ -29,7 +29,7 @@ export const getWeatherData = async ( lat, lng) => {
       const { data } = await axios.get('https://open-weather-map27.p.rapidapi.com/weather', {
         params: { lon: lng, lat: lat, },
         headers: {
-          'X-RapidAPI-Key': '41599fd560msh907746e088eb965p1a2b46jsnb4b6b8c5b300',
+          'X-RapidAPI-Key': process.env.REACT_APP_RAPIDAPI_KEY,
           'X-RapidAPI-Host': 'open-weather-map27.p.rapidapi.com'
         },
       });
