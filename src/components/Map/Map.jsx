@@ -9,7 +9,9 @@ import useStyles from './styles';
 
 const Map = ({ places, setCoordinates, setBounds, coordinates, setChildClicked, weatherData }) => {
     const classes = useStyles();
-    const isDesktop = useMediaQuery('(min-width:600px)');
+    const isMobile = useMediaQuery('(min-width:600px)');
+
+    const coordinates = { lat: 6.68540, lng: 3.27388 };
 
     return (
         <div className={classes.mapContainer}>
