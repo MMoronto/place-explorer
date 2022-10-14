@@ -7,9 +7,9 @@ import Rating from '@material-ui/lab/Rating';
 import mapStyles from './mapStyles';
 import useStyles from './styles';
 
-const Map = ({ places, setCoordinates, setBounds, coordinates, setChildClicked, weatherData }) => {
+const Map = ({ places, setCoordinates, setBounds, _coordinates, setChildClicked, weatherData }) => {
     const classes = useStyles();
-    const isMobile = useMediaQuery('(min-width:600px)');
+    const isDesktop = useMediaQuery('(min-width:600px)');
 
     const coordinates = { lat: 6.68540, lng: 3.27388 };
 
