@@ -20,6 +20,7 @@ const Map = ({ places, setCoordinates, setBounds, _coordinates, setChildClicked,
                 defaultCenter={coordinates}
                 center={coordinates}
                 defaultZoom={14}
+                yesIWantToUseGoogleMapApiInternals
                 margin={[50, 50, 50, 50]}
                 optioins={{ disableDefaultUI: true, zoomControl: true, styles: mapStyles }}
                 onChange={(e) => {
