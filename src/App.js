@@ -13,12 +13,13 @@ const App = () => {
     const [filteredPlaces, setFilteredPlaces] = useState([]);
 
     const [childClicked, setChildClicked] = useState(null);
+    const [isLoading, setIsLoading] = useState(false);
+    const [autocomplete, setAutocomplete] = useState(null);
 
     const [coordinates, setCoordinates] = useState({});
     const [bounds, setBounds] = useState({});
-
-    const [isLoading, setIsLoading] = useState(false);
-    const [type, setType] = useState('restaurants');
+    
+    const [type, setType] = useState('places');
     const [rating, setRating] = useState('');
 
 
