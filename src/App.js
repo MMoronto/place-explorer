@@ -16,7 +16,7 @@ const App = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [autocomplete, setAutocomplete] = useState(null);
 
-    const [coordinates, setCoordinates] = useState({});
+    const [coords, setCoords] = useState({});
     const [bounds, setBounds] = useState({});
     
     const [type, setType] = useState('places');
@@ -25,12 +25,12 @@ const App = () => {
 
     useEffect(() => {
         navigator.geolocation.getCurrentPosition(({ coords: { latitude, longitude } }) => {
-            setCoordinates({ lat: latitude, lng: longitude });
+            setCoords({ lat: latitude, lng: longitude });
         })
     }, []);
 
     useEffect(() => {
-        const filteredPlaces = places.filter((place) => place.rating > rating)
+        const filteredPlaces = places.filter((place) => Number(place.rating) > rating);
 
         setFilteredPlaces(filteredPlaces);
     }, [rating]);
@@ -39,15 +39,16 @@ const App = () => {
         if(bounds.sw && bounds.ne) {
         setIsLoading(true);
 
-        getWeatherData(coordinates.lat, coordinates.lng)
+        getWeatherData(coords.lat, coords.lng)
             .then((data) => setWeatherData(data));
         
         getPlacesData(type, bounds.sw, bounds.ne)
             .then((data) => {
                 setPlaces(data?.filter((place) => place.name && place.num_reviews > 0));
-                setFilteredPlaces([])
+                setFilteredPlaces([]);
+                setRating('');
                 setIsLoading(false);
-            })
+            });
         }
     }, [type, bounds]);
 
@@ -55,7 +56,7 @@ const App = () => {
     return (
         <>
             <CssBaseline />
-            <Header setCoordinates={setCoordinates} />
+            <Header setCoords={setCoords} />
             <Grid container spacing={3} style={{ width: '100%' }}>
                 <Grid item xs={12} md={4}>
                     <List 
@@ -70,9 +71,9 @@ const App = () => {
                 </Grid>
                 <Grid item xs={12} md={8}>
                     <Map 
-                        setCoordinates={setCoordinates}
+                        setCoords={setCoords}
                         setBounds={setBounds}
-                        coordinates={coordinates}
+                        coordinates={coords}
                         places={filteredPlaces.length ? filteredPlaces : places}
                         setChildClicked={setChildClicked}
                         weatherData={weatherData}
