@@ -10,11 +10,11 @@ import useStyles from './styles';
 const handleApiLoaded = (map, maps) => {
 
 };
-const Map = ({ places, setCoords, setBounds, coords, setChildClicked, weatherData }) => {
+const Map = ({ places, setCoords, setBounds, setChildClicked, weatherData }) => {
     const classes = useStyles();
     const isDesktop = useMediaQuery('(min-width:600px)');
 
-    // const coordinates = { lat: 6.68540, lng: 3.27388 };
+    const coords = { lat: 6.68540, lng: 3.27388 };
 
     return (
         <div className={classes.mapContainer}>
