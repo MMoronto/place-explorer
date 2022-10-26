@@ -41,7 +41,7 @@ const Map = ({ places, setCoords, setBounds, setChildClicked, weatherData }) => 
                        key={i}
                     >
                         {
-                            !isDesktop ? (
+                            !matches ? (
                                 <LocationOnOutlinedIcon color="primary" fontSize="large" />
                             ) : (
                                 <Paper elevation={3} className={classes.paper}>
