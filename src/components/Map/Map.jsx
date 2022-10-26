@@ -5,7 +5,7 @@ import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import Rating from '@material-ui/lab/Rating';
 
 import mapStyles from './mapStyles';
-import useStyles from './styles';
+import useStyles from './styles.js';
 
 const handleApiLoaded = (map, maps) => {
 
