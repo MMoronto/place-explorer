@@ -7,9 +7,7 @@ import Rating from '@material-ui/lab/Rating';
 import mapStyles from '../../mapStyles';
 import useStyles from './styles.js';
 
-// const handleApiLoaded = (map, maps) => {
 
-// };
 const Map = ({ places, setCoords, setBounds, setChildClicked, weatherData }) => {
     const classes = useStyles();
     const isDesktop = useMediaQuery('(min-width:600px)');
@@ -24,7 +22,7 @@ const Map = ({ places, setCoords, setBounds, setChildClicked, weatherData }) => 
                 center={coords}
                 defaultZoom={14}
                 yesIWantToUseGoogleMapApiInternals
-                // onGoogleApiLoaded={({ map, maps }) => handleApiLoaded(map, maps)}
+                
                 margin={[50, 50, 50, 50]}
                 optioins={{ disableDefaultUI: true, zoomControl: true, styles: mapStyles }}
                 onChange={(e) => {
